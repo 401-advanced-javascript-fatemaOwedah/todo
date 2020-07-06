@@ -41,7 +41,7 @@ function ToDo(){
   },[]);
 
   useEffect(() => {
-    if (list.length >= 1) { document.title = 'Incomplete'; }
+    if (list.filter(item => !item.complete).length >= 1) { document.title = 'Incomplete'; }
     else  { document.title = 'complete'; }
   }, [list]);
   
