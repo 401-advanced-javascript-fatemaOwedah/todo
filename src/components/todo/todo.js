@@ -27,6 +27,8 @@ function ToDo(){
     }
   };
 
+  
+
   useEffect(() => {
     let list = [
       { _id: 1, complete: false, text: 'Clean the Kitchen', difficulty: 3, assignee: 'Person A'},
@@ -37,6 +39,13 @@ function ToDo(){
     ];
     setList(list); 
   },[]);
+
+  useEffect(() => {
+    if (list.length >= 1) { document.title = 'Incomplete'; }
+    else  { document.title = 'complete'; }
+  }, [list]);
+  
+ 
 
   return (
     <>

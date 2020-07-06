@@ -1,6 +1,6 @@
 # todo
 
-### Project:  RESTy
+### Project:  To-Do Application
 ### Author: Fatema Owedah
 
 ### Links and Resources
