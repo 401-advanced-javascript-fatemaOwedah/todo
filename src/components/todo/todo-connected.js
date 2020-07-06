@@ -4,7 +4,7 @@ import TodoList from './list.js';
 
 // import './todo.scss';
 
-const todoAPI = 'https://api-js401.herokuapp.com/api/v1/todo';
+const todoAPI = 'https://api401-todo.herokuapp.com/todo';
 
 
 function ToDo() {
