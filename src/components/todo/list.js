@@ -2,12 +2,10 @@ import React from 'react';
 import ListGroup from 'react-bootstrap/ListGroup';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-let variant ='';
 function TodoList (props) {
   return (
     <ListGroup as="ul">
-      {props.list.map(item => {
-        ! item.complete ? variant = 'success' : variant = 'danger',
+      {props.list.map(item => (
         <ListGroup.Item
           className={`complete-${item.complete.toString()} li ` }
           key={item._id}
@@ -16,7 +14,7 @@ function TodoList (props) {
             {item.text}  By   {item.assignee} 
           </span>
           </ListGroup.Item>
-      })}
+      ))}
     </ListGroup>
   );
 }
