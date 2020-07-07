@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
@@ -31,7 +31,7 @@ function TodoForm(props) {
 
         <Form.Group controlId="formBasicCheckbox">
           <Form.Label>Difficulty Rating</Form.Label>
-          <Form.Control type="range" custom defaultValue="1" min="1" max="5" name="difficulty" onChange={handelChange} />
+          <Form.Control type="range" custom defaultValue="1" min="0" max="5" name="difficulty" onChange={handelChange} />
         </Form.Group>
 
         <Button variant="primary" type="submit">

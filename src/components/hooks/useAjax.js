@@ -31,7 +31,7 @@ function useAjax(callback){
         let data = {
             item: item.item,
             difficulty: item.difficulty,
-            complete: item.complete,
+            complete: !item.complete,
             assignee: item.assignee
         };
         await axios.put(url, data, config);
