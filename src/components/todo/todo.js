@@ -38,24 +38,19 @@ function ToDo(){
         <Navbar bg="dark" variant="dark">
           <Navbar.Brand >To Do List Manager ({list.filter(item => !item.complete).length}) </Navbar.Brand>
         </Navbar>
-        <Row className="todo">
-          <Col> 
-           <div>
-             <TodoForm handleSubmit={addItem} />
-           </div>
-           </Col>
-           <Col >
-           <div>
-            <TodoList
-            list={list}
-            handleComplete={updateItem}
-            handleDelete={deleteItem}
-            />
-           </div>
-          </Col>
-       </Row>
+         <section className="todo">
+
+         <div className="form-border">
+          <TodoForm handleSubmit={addItem} />
+        </div>
+
+        <div className="list-group">
+          <TodoList list={list} handelDelete={deleteItem} handleComplete={updateItem} />
+        </div>
+      </section>
      </Container>
     </>
   );
 }
+
 export default ToDo;

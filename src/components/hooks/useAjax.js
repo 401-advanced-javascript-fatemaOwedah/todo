@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react';
 import axios from 'axios';
 
-function useAjax(){
+function useAjax(callback){
     const [items,setItems] = useState([]);
     const addItem = async (item) =>{
         let config = {
@@ -52,7 +52,9 @@ function useAjax(){
             mode: 'cors'
         }
         let url = 'https://api401-todo.herokuapp.com/todo';
-        await axios.get(url,config);
+        let res = await axios.get(url,config);
+        callback(res.data)
+
     }
 
     useEffect(()=>{

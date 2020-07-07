@@ -1,19 +1,19 @@
 import {useState} from 'react';
 
 function useForm(callback){
-const [item,setItem] = useState({});
+const [todo,setTodo] = useState({});
 
 const handelSubmit = (e) =>{
     e.preventDefault();
-    item.complete = false;
-    callback(item);
+    todo.complete = false;
+    callback(todo);
 }
 const handelChange = (e) =>{
     e.persist();
-    setItem({...item,[e.target.name]: e.target.value});
+    setTodo({...todo,[e.target.name]: e.target.value});
 }
 
-return [handelSubmit,handelChange,item];
+return [handelSubmit,handelChange,todo];
 }
 
 export default useForm;
