@@ -8,12 +8,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function TodoForm(props) {
-  const [item, setItem] = useState({});
-  const [handelSubmit,handelChange] = useForm(addItem);
-  function addItem(obj){
-    props.handelSubmit(obj);
-    setItem({...item,obj});
+  const [handelSubmit,handelChange] = useForm(addItemm);
+  function addItemm(obj){
+    props.handleSubmit(obj);
   }
+
 
   return (
     <>
@@ -21,7 +20,8 @@ function TodoForm(props) {
       <Form onSubmit={handelSubmit}>
         <Form.Group controlId="formBasicEmail">
           <Form.Label>To Do Item</Form.Label>
-          <Form.Control type="text" placeholder="Item Details"  name="text"  onChange={handelChange}/>
+          <Form.Control type="text" name="item" placeholder="Details"
+            onChange={handelChange} />
         </Form.Group>
 
         <Form.Group controlId="formBasicPassword">

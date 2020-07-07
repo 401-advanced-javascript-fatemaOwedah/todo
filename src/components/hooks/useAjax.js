@@ -3,7 +3,9 @@ import axios from 'axios';
 
 function useAjax(callback){
     const [items,setItems] = useState([]);
+
     const addItem = async (item) =>{
+        item.complete = false;
         let config = {
             headers: { 'Content-Type': 'application/json' },
             mode: 'cors', 

@@ -41,11 +41,11 @@ function ToDo(){
          <section className="todo">
 
          <div className="form-border">
-          <TodoForm handelSubmit={addItem} />
+          <TodoForm handleSubmit={addItem} />
         </div>
 
         <div className="list-group">
-          <TodoList list={list} handelDelete={deleteItem} handelComplete={updateItem} />
+          <TodoList list={list} handelDelete={deleteItem} handleComplete={updateItem} />
         </div>
       </section>
      </Container>
