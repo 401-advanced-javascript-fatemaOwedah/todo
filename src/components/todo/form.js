@@ -8,29 +8,30 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function TodoForm(props) {
-  const [handleSubmit, handleChange, item] = useForm(handleForm);
-
-  function handleForm(item) {
-    props.handleSubmit(item)
+  const [item, setItem] = useState({});
+  const [handelSubmit,handelChange] = useForm(addItem);
+  function addItem(obj){
+    props.handleSubmit(obj);
+    setItem({...item,obj});
   }
 
   return (
     <>
       <h3>Add To Do Item</h3>
-      <Form onSubmit={handleSubmit}>
+      <Form onSubmit={handelSubmit}>
         <Form.Group controlId="formBasicEmail">
           <Form.Label>To Do Item</Form.Label>
-          <Form.Control type="text" placeholder="Item Details"  name="text"  onChange={handleChange}/>
+          <Form.Control type="text" placeholder="Item Details"  name="text"  onChange={handelChange}/>
         </Form.Group>
 
         <Form.Group controlId="formBasicPassword">
           <Form.Label>Assigned To</Form.Label>
-          <Form.Control type="text" name="assignee" placeholder="Assignee Name" onChange={handleChange}/>
+          <Form.Control type="text" name="assignee" placeholder="Assignee Name" onChange={handelChange}/>
         </Form.Group>
 
         <Form.Group controlId="formBasicCheckbox">
           <Form.Label>Difficulty Rating</Form.Label>
-          <Form.Control type="range" custom defaultValue="1" min="1" max="5" name="difficulty" onChange={handleChange} />
+          <Form.Control type="range" custom defaultValue="1" min="1" max="5" name="difficulty" onChange={handelChange} />
         </Form.Group>
 
         <Button variant="primary" type="submit">

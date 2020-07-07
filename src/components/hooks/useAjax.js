@@ -9,13 +9,13 @@ function useAjax(callback){
             mode: 'cors', 
         };
         let url = 'https://api401-todo.herokuapp.com/todo';
-        let body = {
+        let data = {
             item: item.item,
             difficulty: item.difficulty,
             complete: item.complete,
             assignee: item.assignee
         };
-        await axios.post(url, body, config);
+        await axios.post(url, data, config);
         let final = await getItems();
         setItems([final]);
         
@@ -26,13 +26,13 @@ function useAjax(callback){
             mode: 'cors', 
         };
         let url = `https://api401-todo.herokuapp.com/todo/${_id}`;
-        let body = {
+        let data = {
             item: item.item,
             difficulty: item.difficulty,
             complete: item.complete,
             assignee: item.assignee
         };
-        await axios.put(url, body, config);
+        await axios.put(url, data, config);
         let final = await getItems();
         setItems([final]);
     }
@@ -52,8 +52,8 @@ function useAjax(callback){
             mode: 'cors'
         }
         let url = 'https://api401-todo.herokuapp.com/todo';
-        let res = await axios.get(url,config);
-        callback(res.data)
+        let final = await axios.get(url,config);
+        callback(final.data)
 
     }
 
