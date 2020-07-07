@@ -36,12 +36,12 @@ function useAjax(callback){
         let final = await getItems();
         setItems([final]);
     }
-    const deleteItem = async (_id) =>{
+    const deleteItem = async (id) =>{
         let config = {
             headers: { 'Content-Type': 'application/json' },
             mode: 'cors', 
         };
-        let url = `https://api401-todo.herokuapp.com/todo/${_id}`;
+        let url = `https://api401-todo.herokuapp.com/todo/${id}`;
         await axios.delete(url, config);
         let final = await getItems();
         setItems([final]);

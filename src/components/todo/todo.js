@@ -13,9 +13,9 @@ import './todo.scss';
 function ToDo(){
   const [list, setList] = useState([]);
   
-  const [addItem, updateItem,  deleteItem] = useAjax(add);
+  const [addItem, updateItem,  deleteItem] = useAjax(adds);
 
-  function add(lists) {
+  function adds(lists) {
     setList(lists);
   }
 
@@ -41,11 +41,11 @@ function ToDo(){
          <section className="todo">
 
          <div className="form-border">
-          <TodoForm handleSubmit={addItem} />
+          <TodoForm handelSubmit={addItem} />
         </div>
 
         <div className="list-group">
-          <TodoList list={list} handelDelete={deleteItem} handleComplete={updateItem} />
+          <TodoList list={list} handelDelete={deleteItem} handelComplete={updateItem} />
         </div>
       </section>
      </Container>

@@ -11,7 +11,7 @@ function TodoForm(props) {
   const [item, setItem] = useState({});
   const [handelSubmit,handelChange] = useForm(addItem);
   function addItem(obj){
-    props.handleSubmit(obj);
+    props.handelSubmit(obj);
     setItem({...item,obj});
   }
 
