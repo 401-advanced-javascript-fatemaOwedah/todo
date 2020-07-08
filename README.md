@@ -5,7 +5,7 @@
 
 ### Links and Resources
 
-- [submission PR](https://github.com/401-advanced-javascript-fatemaOwedah/todo/pull/2)
+- [submission PR](https://github.com/401-advanced-javascript-fatemaOwedah/todo/pull/3)
 
 #### Documintation
 
@@ -24,8 +24,6 @@
 - npm init -y 
 - npm i 
 
-#### help me in it:
-- Sondos Abu-Elian
 
 
 #### UML
