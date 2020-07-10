@@ -59,7 +59,7 @@ let sub = array2;
   function buttons(){
     let button =[];
     for(let i=0;i<result.length;i++){
-      button.push(<Button key={i} id={i} onClick={pages} style={{ width:'20%', marginLeft: 50 + 'em' , marginTop: 1+'em' }}>{i+1}</Button>);
+      button.push(<Button key={i} id={i} onClick={pages} style={{ width:'20%', marginLeft: 50 + 'em' , marginTop: 1+'em' , borderRadius:20 + 'em' }}>{i+1}</Button>);
     }
     return button;
   }
@@ -76,7 +76,7 @@ let sub = array2;
          <Container className="li"  key={item._id}>
             <Row className="firstRow">
             <Col className="text-end">
-            <Button variant= {state} onClick={() => context.updateItem(item,item._id)}>
+            <Button style={{height: '5%' ,borderRadius:50 + 'em' }} variant= {state} onClick={() => context.updateItem(item,item._id)}>
               {word}
             </Button>                
             </Col>
@@ -98,7 +98,7 @@ let sub = array2;
        ))}
     </Container>
     }else{
-      return <Container  className="ul"style={{ width:'100%', marginTop: -19 + 'em' , marginRight: -17+'em' }}>
+      return <Container  className="ul"style={{ width:'100%', marginTop: -19 + 'em' , marginRight: -17+'em'}}>
        {array2.map(item => (
          !item.complete ? word = 'Pending' : word = 'Complete',
          !item.complete ? state = 'danger' : state = 'success',
@@ -139,7 +139,7 @@ console.log('count==========>',count);
     <>
     {render(page)}
     {buttons()}
-    <Button variant= {state} onClick={clicked} style={{ width:'20%', marginLeft: 50 + 'em' , marginTop: 1+'em' }}>
+    <Button variant= {state} onClick={clicked} style={{ width:'20%', marginLeft: 50 + 'em' , marginTop: 1+'em', borderRadius:20 + 'em' }}>
      {click}
     </Button> 
     </>
