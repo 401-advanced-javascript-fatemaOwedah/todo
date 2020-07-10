@@ -76,7 +76,7 @@ let sub = array2;
          <Container className="li"  key={item._id}>
             <Row className="firstRow">
             <Col className="text-end">
-            <Button style={{width:'20%',height: '5%' ,borderRadius:50 + 'em' }} variant= {state} onClick={() => context.updateItem(item,item._id)}>
+            <Button style={{ borderRadius:50 + 'em' }} variant= {state} onClick={() => context.updateItem(item,item._id)}>
               {word}
             </Button>                
             </Col>

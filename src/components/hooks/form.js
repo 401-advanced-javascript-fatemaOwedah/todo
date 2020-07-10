@@ -6,6 +6,7 @@ const [todo,setTodo] = useState({});
 
 const handelSubmit = (e) =>{
     e.preventDefault();
+    e.target.reset();
     todo.complete = false;
     callback(todo);
 }
