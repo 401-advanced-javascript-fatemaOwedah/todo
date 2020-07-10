@@ -18,7 +18,7 @@ function TodoForm(props) {
   return (
     <>
       <h3>Add To Do Item</h3>
-      <Form onSubmit={handelSubmit}>
+      <Form onSubmit={handelSubmit} style={{ float: 'left' , width:'150%' }}>
         <Form.Group controlId="formBasicEmail">
           <Form.Label>To Do Item</Form.Label>
           <Form.Control type="text" name="item" placeholder="Details"
