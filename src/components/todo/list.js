@@ -124,6 +124,7 @@ let sub = array2;
            
             </Row>
         </Container>
+        
        ))}
     </Container>
 
