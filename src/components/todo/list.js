@@ -91,7 +91,7 @@ let sub = array2;
               </Col>
             </Row>
             <Row className="text-end">
-            <Col md={{ span: 25, offset: 6 }}> Difficulty : {item.difficulty}</Col>
+            <Col md={{ span: 25, offset: 5}}> Difficulty : {item.difficulty}</Col>
            
             </Row>
         </Container>
@@ -120,7 +120,7 @@ let sub = array2;
               </Col>
             </Row>
             <Row className="text-end">
-            <Col md={{ span: 25, offset: 6 }}> Difficulty : {item.difficulty}</Col>
+            <Col md={{ span: 25, offset: 5 }}> Difficulty : {item.difficulty}</Col>
            
             </Row>
         </Container>

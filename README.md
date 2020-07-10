@@ -27,4 +27,4 @@
 
 
 #### UML
-![UML](/assets/lab32.jpeg)
+![UML](/assets/lab33.jpeg)
