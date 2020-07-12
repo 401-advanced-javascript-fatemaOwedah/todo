@@ -4,9 +4,9 @@ import React, { useState,useEffect } from 'react';
 import useAjax from '../../src/components/hooks/useAjax';
 
 
-export const SettingsContext = React.createContext();
+export const FilterContext = React.createContext();
 
-function SettingsProvider(props) {
+function FilterProvider(props) {
 
     const [list, setList] = useState([]);
   
@@ -22,15 +22,15 @@ function SettingsProvider(props) {
 
     let data ={
         list,
-        addItem,
-        updateItem,
-        deleteItem,
+        add: addItem,
+        update: updateItem,
+        delete: deleteItem,
     }
     return (
-        <SettingsContext.Provider value={data}>
+        <FilterContext.Provider value={data}>
           {props.children}
-        </SettingsContext.Provider>
+        </FilterContext.Provider>
       );
 }
 
-export default SettingsProvider;
+export default FilterProvider;

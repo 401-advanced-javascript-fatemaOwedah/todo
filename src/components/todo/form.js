@@ -1,24 +1,28 @@
-import React from 'react';
+import React, { useState ,useContext} from 'react';
 
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
 import useForm from '../hooks/form';
+import {FilterContext} from '../../contex/todo';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function TodoForm(props) {
+  const [item, setItem] = useState({});
   const [handelSubmit,handelChange] = useForm(addItemm);
+  const context = useContext(FilterContext);
   function addItemm(obj){
-    props.handleSubmit(obj);
+    context.add(obj);
+    setItem({...item,obj});
   }
 
 
   return (
     <>
-      <h3>Add To Do Item</h3>
-      <Form onSubmit={handelSubmit} style={{ float: 'left' , width:'150%' }}>
+      <h3 >Add To Do Item</h3>
+      <Form onSubmit={handelSubmit} style={{ float: 'left' , width:'150%' , marginTop: -50 + 'em', padding: 0 + 'em'}}>
         <Form.Group controlId="formBasicEmail">
           <Form.Label>To Do Item</Form.Label>
           <Form.Control type="text" name="item" placeholder="Details"
