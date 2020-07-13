@@ -22,7 +22,7 @@ function TodoForm(props) {
   return (
     <>
       <h3 >Add To Do Item</h3>
-      <Form onSubmit={handelSubmit} style={{ float: 'left' , width:'150%' , marginTop: -50 + 'em', padding: 0 + 'em'}}>
+      <Form onSubmit={handelSubmit} style={{ float: 'left' , width:'150%' , marginTop: -30 + 'em', padding: 0 + 'em'}}>
         <Form.Group controlId="formBasicEmail">
           <Form.Label>To Do Item</Form.Label>
           <Form.Control type="text" name="item" placeholder="Details"
